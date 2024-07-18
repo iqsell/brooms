@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактная информация</title>
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>      
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="{% url 'index' %}" class="logo">
+                        <img class="logo__img" src="{% static 'images/ges.gif' %}" alt="Логотип" >
+                    </a>
+                    <nav class="menu copy__nav-list">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a href="{% url 'index' %}" class="menu__list-link menu__list-link1">Компания</a>
+                                <span class="menu-arrow arrow"></span>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="#" class="menu__list-link menu__list-link1">Каталог продукции</a>
+                                <ul class="sub-menu__list">
+                                    <li>
+                                        <a href="{% url 'venik' %}" class="sub-menu__list-link ">Банные веники</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'nov' %}" class="sub-menu__list-link">Новинки</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="{% url 'opt' %}" class="menu__list-link menu__list-link1">Дилерам</a>
+                            </li> 
+                            <li class="menu__list-item">
+                                <a href="{% url 'contact' %}" class="menu__list-link menu__list-link1">Контакты</a>
+                            </li> 
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="contacts__title">Контактная информация</h2>
+                    <div class="contacts-list">
+                        <div><strong>Телефон</strong>:</div>
+                        <p>8-919-413-44-75
+                        <br>8-902-672-77-04</p>
+                        <div><strong>E-mail: </strong></div>
+                        <p>a10785150@gmail.com
+                        <br>den.abazovik@mail.ru</p>
+                        <div><strong>Адрес: </strong></div>
+                        <p>424005, Республика Марий Эл,<br>
+                        г. Йошкар-Ола, ул. Сернурский<br>тракт, д. 20 Г</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="{% url 'opt' %}">Дилерам</a>
+                        </li>
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="{% url 'contact' %}">Контакты</a>
+                        </li> 
+                    </ul>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="{% url 'venik' %}">Банные веники</a>
+                        </li> 
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link" href="{% url 'nov' %}">Новинки</a>
+                        </li> 
+                    </ul>
+                </nav>
+                <div class="footer__copy">
+                    <p class="footer__copy-text">
+                        Вся представленная на сайте информация, касающаяся характеристик продуктов и стоимости товаров, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437(2) Гражданского кодекса Российской Федерации. Для получения подробной информации о наличии и стоимости указанных товаров и (или) услуг, пожалуйста, обращайтесь к менеджерам компании по телефону +7 919 413 44 75
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    </div>
+</body>
+</html>
